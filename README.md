@@ -18,7 +18,7 @@ Corso di grafica in movimento 2025, SUPSI
 - [commento testo](https://laura-pantani.github.io/gim/esercizio_1C/commento_testo_es1C.md) 
 
 ## Esercizio 2A
-- [parallasse] (https://laura-pantani.github.io/gim/esercizio_2/template/parallasse_interattivo.html
+- [parallasse] (https://laura-pantani.github.io/gim/esercizio_2/template/parallasse_interattivo.html)
 ## Esercizio 3A
 - [pong](https://laura-pantani.github.io/gim/esercizio_3A/esempi/es03_pong/pong.html)
 - [pioggia](https://laura-pantani.github.io/gim/esercizio_3A/esempi/es04_pioggia/pioggia.html)
