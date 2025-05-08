@@ -16,3 +16,6 @@ Corso di grafica in movimento 2025, SUPSI
 
 ## Esercizio 1C  
 - [commento testo](https://laura-pantani.github.io/gim/esercizio_1C/commento_testo_es1C.md) 
+
+## Esercizio 2A
+- 
