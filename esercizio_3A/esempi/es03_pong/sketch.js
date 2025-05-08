@@ -8,10 +8,10 @@ function setup() {
 	createCanvas(500, 400)
 
 	posX = 200
-	velX = 7
+	velX = 3
 
 	posY = 100
-	velY = 4
+	velY = 2
 
 	background(255,0,0)
 }
@@ -38,11 +38,15 @@ function draw() {
 
 
 
-	background(190)
+	//background(190)
 
-	noStroke(0)
-	fill(255)
-	let d = (0, 0, 1, 20, 50)
+	noStroke()
+	let d = map(sin(frameCount * 0.11), -1, 1, 20, 100)
+	let r = map(sin(frameCount * 0.13), -1, 1, 0, 255)
+	let g = map(sin(frameCount * 0.14), -1, 1, 0, 255)
+	let b = map(sin(frameCount * 0.16), -1, 1, 0, 255)
+	// fill(frameCount % 2 * 255)
+	fill(r, g, b)
 	ellipse(posX, posY, d)
 
 
