@@ -20,7 +20,9 @@ Corso di grafica in movimento 2025, SUPSI
 ## Esercizio 2A
 - [parallasse](https://laura-pantani.github.io/gim/esercizio_2/template/parallasse_interattivo.html)
 ## Esercizio 3A
-- [pong](https://laura-pantani.github.io/gim/esercizio_3A/esempi/es03_pong/pong.html)
+- [pong](https://laura-pantani.github.io/gim/esercizio_3A/esempi/es03_pong/index.html)
 - [pioggia](https://laura-pantani.github.io/gim/esercizio_3A/esempi/es04_pioggia/pioggia.html)
-- [neve]()
+- [neve](https://laura-pantani.github.io/gim/esercizio_3A/esempi/es06_neve/neve.html)
+- [orologio analogioco](https://laura-pantani.github.io/gim/esercizio_3A/esempi/orologio_analogioco/orologio_analogioco.html)
+- [orologio digitale](https://laura-pantani.github.io/gim/esercizio_3A/esempi/orologio_digitale/orologio_digitale.html)
 
