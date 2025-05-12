@@ -22,11 +22,11 @@ function draw() {
 	posY = posY + velY
 
 
-	// if(posX >= width) {
-	// 	velX = -velX
-	// } else if (posX < 0) {
-	// 	velX = -velX
-	// }
+	//if(posX >= width) {
+		//velX = -velX
+	//} else if (posX < 0) {
+		//velX = -velX
+	//}
 
 	if(posX >= width || posX < 0) {
 		velX = -velX
@@ -38,13 +38,13 @@ function draw() {
 
 
 
-	//background(190)
+	background(190)
 
 	noStroke()
-	let d = map(sin(frameCount * 0.11), -1, 1, 20, 100)
-	let r = map(sin(frameCount * 0.13), -1, 1, 0, 255)
-	let g = map(sin(frameCount * 0.14), -1, 1, 0, 255)
-	let b = map(sin(frameCount * 0.16), -1, 1, 0, 255)
+	let d = map(sin(frameCount * 0), 0, 1, 20, 50)
+	let r = map(sin(frameCount * 0), 0, 1, 0, 0)
+	let g = map(sin(frameCount * 0), 0, 1, 0, 0)
+	let b = map(sin(frameCount * 0), 0, 1, 0, 0)
 	// fill(frameCount % 2 * 255)
 	fill(r, g, b)
 	ellipse(posX, posY, d)
