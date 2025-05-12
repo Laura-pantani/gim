@@ -4,42 +4,40 @@ function setup(){
 	createCanvas(windowWidth, windowHeight)
 	
 	fiocchi = []
+
+
 	
-	for (let i=0; i<500; i++){ 
+	for (let i=0; i<400; i++){ 
 		fiocchi[i] = {
-			px : random(0, width),
-			py : random(-100, 200),
+			px : random(0,width),
+			py : random(-100,200),
 			dim : random(30,60),
-			vel : random(1,5),
-			col : random(255,255)
+			vel : random(1,3),
+			col : random(100,255),
 		}
 
 	}
 
 }	
 
-function windowResized() {
-	resizeCanvas(windowWidth, windowHeight)
-}
+
 
 function draw() {
 	background(100)
-	textAlign(CENTER, CENTER)
+	
 
-	for(let i=0; i<fiocchi.lenght; i++){
-		fill(fiocchi[i].col)
-
+	for(let i=0; i<fiocchi.length; i++) {
 		fiocchi[i].px = fiocchi[i].px + random(-1.5, 1.5)
 		fiocchi[i].py = fiocchi[i].py + fiocchi[i].vel
-
-	 
-	if(fiocchi[i].py > height) {
-		fiocchi[i].py = 0
-	}
-
+		
+		if(fiocchi[i].py > height + 100) {
+			fiocchi[i].py = 0
+		}
+		
+		fill(fiocchi[i].col)
 		
 		
-		textSize(fiocchi[i].dim)
+		//textSize(fiocchi[i].dim)
 		text("*",fiocchi[i].px, fiocchi[i].py)
 	}
 	
@@ -47,3 +45,6 @@ function draw() {
 
 }
 
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight)
+}
