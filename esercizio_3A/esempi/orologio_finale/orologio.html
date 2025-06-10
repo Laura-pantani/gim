@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orologio</title>
+  <div id="clock-container">
+    <div class="ball" id="seconds-ball">--</div>
+    <div class="ball" id="minutes-ball">--</div>
+    <div class="ball" id="hours-ball">--</div>
+    
+    <style>
+      body {
+        margin: 0;
+        background: #111;
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        font-family: sans-serif;
+      }
+    
+      .ball {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: white;
+        font-weight: bold;
+        pointer-events: none;
+        user-select: none;
+        transition: background-color 0.2s;
+      }
+    
+      #seconds-ball {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+        top: 30%;
+        background-color: #ff3c3c;
+      }
+    
+      #minutes-ball {
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+        top: 50%;
+        background-color: #3cff7a;
+      }
+    
+      #hours-ball {
+        width: 80px;
+        height: 80px;
+        font-size: 22px;
+        top: 70%;
+        background-color: #3c96ff;
+      }
+    </style>
+    
+    <script>
+      const balls = [
+        {
+          el: document.getElementById("seconds-ball"),
+          duration: 1000,
+          size: 40,
+          direction: 1,
+          lastTime: performance.now(),
+          label: () => new Date().getSeconds().toString().padStart(2, '0')
+        },
+        {
+          el: document.getElementById("minutes-ball"),
+          duration: 60000,
+          size: 60,
+          direction: 1,
+          lastTime: performance.now(),
+          label: () => new Date().getMinutes().toString().padStart(2, '0')
+        },
+        {
+          el: document.getElementById("hours-ball"),
+          duration: 3600000,
+          size: 80,
+          direction: 1,
+          lastTime: performance.now(),
+          label: () => new Date().getHours().toString().padStart(2, '0')
+        }
+      ];
+    
+      const screenWidth = () => window.innerWidth;
+    
+      function getRandomColor() {
+        return `hsl(${Math.floor(Math.random() * 360)}, 80%, 60%)`;
+      }
+    
+      function animate() {
+        const now = performance.now();
+    
+        balls.forEach(ball => {
+          const elapsed = (now - ball.lastTime) % (ball.duration * 2);
+          const progress = elapsed / ball.duration;
+    
+          let pos;
+          if (progress <= 1) {
+            pos = progress;
+            ball.direction = 1;
+          } else {
+            pos = 2 - progress;
+            ball.direction = -1;
+          }
+    
+          const x = pos * (screenWidth() - ball.size);
+          ball.el.style.left = `${x}px`;
+    
+          
+          ball.el.textContent = ball.label();
+    
+          if (Math.abs(progress - 1) < 0.01) {
+            ball.el.style.backgroundColor = getRandomColor();
+          }
+        });
+    
+        requestAnimationFrame(animate);
+      }
+    
+      animate();
+    </script>
+    
+
+  
+  
