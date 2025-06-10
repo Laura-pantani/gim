@@ -26,5 +26,5 @@ Corso di grafica in movimento 2025, SUPSI
 - [orologio analogioco](https://laura-pantani.github.io/gim/esercizio_3A/esempi/orologio_analogioco/orologio_analogioco.html)
 - [orologio digitale](https://laura-pantani.github.io/gim/esercizio_3A/esempi/orologio_digitale/orologio_digitale.html)
 
-##Esercizio 3B
+## Esercizio 3B
 - [che ora é](https://laura-pantani.github.io/gim/esercizio_3A/esempi/orologio_finale/orologio.html)
